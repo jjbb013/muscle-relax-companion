@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 · 肌肉放松沟通助手</title>
+<style>
+  body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;max-width:680px;margin:0 auto;padding:24px 20px 64px;color:#1A1A1A;line-height:1.8;}
+  h1{font-size:24px;} h2{font-size:18px;margin-top:32px;}
+  p,li{color:#4A4A4A;font-size:15px;}
+  .meta{color:#9B9B9B;font-size:13px;}
+  .box{background:#F7F8FA;border-radius:12px;padding:16px 20px;margin:16px 0;}
+</style>
+</head>
+<body>
+<h1>隐私政策</h1>
+<p class="meta">肌肉放松沟通助手（iOS） · 版本 1.0 · 生效日期：2026-09-08</p>
+
+<div class="box">
+<p><strong>一句话结论：本应用不收集任何数据。</strong>你的所有记录只存储在你自己的设备上，并以 AES-256 加密保存；应用没有服务器，没有任何数据上传。</p>
+</div>
+
+<h2>1. 我们是谁</h2>
+<p>「肌肉放松沟通助手」是一款由个人开发者提供的 iOS 应用，定位为纯本地的身体状态记录、按摩放松沟通与日常舒缓参考工具。本应用不具备医疗功能，不能替代专业医疗建议。</p>
+
+<h2>2. 数据存储方式</h2>
+<ul>
+<li><strong>100% 设备本地存储</strong>：你的酸痛记录、自定义模板、设置等全部数据仅保存在你的 iPhone 上，存储于系统沙盒内。</li>
+<li><strong>字段级加密</strong>：你输入的自由文本（症状描述、生成的沟通文案、自定义模板内容）在写入存储前经 AES-256 加密，加密密钥仅保存在设备 Keychain 中，且设置为「不随备份迁移到其他设备」。</li>
+<li><strong>文件级保护</strong>：应用数据文件启用 iOS 完整文件保护（NSFileProtectionComplete），锁屏后不可读取。</li>
+</ul>
+
+<h2>3. 我们不做的事</h2>
+<ul>
+<li>无服务器、无云端数据库、无账号体系；</li>
+<li>不集成任何第三方统计、分析、广告或追踪 SDK；</li>
+<li>不收集、不上传、不分享你的任何数据；</li>
+<li>不申请定位、相册、通讯录、健康（HealthKit）等与功能无关的权限；</li>
+<li>语音转写仅使用 iOS 系统框架在设备本地完成，不经过任何外部服务。</li>
+</ul>
+
+<h2>4. 权限说明</h2>
+<ul>
+<li><strong>麦克风</strong>：仅在你主动点击语音输入按钮时申请，用于在设备本地将语音转为文字；音频不会离开设备。</li>
+<li><strong>本地通知</strong>：仅在你主动开启「备份提醒」开关时申请，用于每周一次提醒你手动备份，通知内容不包含任何健康数据。</li>
+<li><strong>文件访问</strong>：备份导出/导入通过系统文件选择器进行，由你显式选择位置，应用不持有任何自动同步逻辑。</li>
+</ul>
+
+<h2>5. 备份与删除</h2>
+<ul>
+<li>备份导出、导入、恢复完全由你手动触发；备份文件为你自选位置保存的 LZ4 压缩 JSON，敏感字段在备份中仍为加密状态。</li>
+<li>你可以随时在应用内删除单条记录或清空全部数据；卸载应用将删除设备上的全部应用数据。</li>
+</ul>
+
+<h2>6. 本页面</h2>
+<p>本隐私政策页面为静态页面，托管于 GitHub Pages，<strong>不放置任何统计脚本，不收集、不记录任何访问数据</strong>。</p>
+
+<h2>7. 政策更新</h2>
+<p>如本政策发生变更，将更新本页面并在此注明生效日期；应用内会在条款更新后要求你重新确认免责声明。</p>
+
+<h2>8. 联系我们</h2>
+<p>如对本政策有任何疑问，可通过本仓库的 GitHub Issues 与开发者联系。</p>
+
+<p class="meta">© 2026 肌肉放松沟通助手开发者 · 本应用仅为身体状态记录、按摩放松沟通与日常舒缓参考工具，不具备医疗功能，不能替代专业医疗建议；身体不适请及时前往正规医疗机构就诊。</p>
+</body>
+</html>
