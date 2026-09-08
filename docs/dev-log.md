@@ -77,3 +77,18 @@ xcodebuild -project MuscleRelax.xcodeproj -scheme MuscleRelax \
 - 2D 热区归一化坐标在小屏机型的命中体验。
 - 语音转写尾音：stopTranscribing 立即 deactivate 音频会话，真机若丢尾音需把 deactivate 移到 finishSession。
 - Core Data 加密字段不参与全文搜索（§3.1 代价声明，符合预期）。
+
+## 2026-09-09 00:35 · 修复「同意并进入」无响应 + 代码开源
+
+### Bug：免责声明按钮点击无响应
+
+- **现象**：用户滚到底后点击「同意并进入」无反应。
+- **根因**：SwiftUI 订阅断链。门控判断 `needsDisclaimer` 在 `ContentView` 里读取 `appState.store?.settings`，但 `AppState.store` 不是 @Published——`DisclaimerView` 内部的 store 写入成功（数据已落盘），ContentView 却收不到变更通知，页面不切换。
+- **修复**：抽出 `ReadyRootView`（@EnvironmentObject 直接订阅 CoreDataStore），门控改在其中判断。已在注释中记录该模式陷阱。
+- 重新编译 BUILD SUCCEEDED，模拟器重启 0 崩溃，免责声明页渲染正常。待用户在模拟器里复测点击跳转。
+
+### 开源发布（commit fa5b8913）
+
+- 全部源码（40 个文件）+ MIT LICENSE + .gitignore 推送至 `jjbb013/muscle-relax-companion` 的 `MuscleRelax/` 目录，README 更新为含构建说明的开源版本。
+- 注意：本机 git 直连 github.com:443 不通（gh CLI 走 API 正常），发布改用 GitHub Git Data API（blobs → tree → commit → ref）完成，未走 git clone。
+- 仓库现为公开仓库，含：源码、隐私政策（GitHub Pages）、需求说明书、开发日志。
