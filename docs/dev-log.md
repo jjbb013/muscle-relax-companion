@@ -46,12 +46,31 @@
 5. `NLTagger(tagSchemes: [.word])` 不存在该 scheme → 改用 `NLTokenizer(unit: .word)`（.simplifiedChinese）。
 6. 第六轮全绿：`xcrun -sdk iphoneos swiftc -typecheck -target arm64-apple-ios16.0 -swift-version 6` 全项目 EXIT 0。
 
-## ⚠️ 阻塞项：Xcode 系统组件待修复
+## ⚠️ 阻塞项：Xcode 系统组件（已解决）
 
-- **现象**：`xcodebuild` 加载 `IDESimulatorFoundation` 插件失败（符号缺失），因 `/Library/Developer/PrivateFrameworks` 属于旧版 Xcode（pkg 版本 26.0.1.0.1758082578，Xcode.app 为 26.4）。
-- **修复**：`xcodebuild -runFirstLaunch` 会重装 `XcodeSystemResources.pkg`，但需要 root；已触发 GUI 授权弹窗（SecurityAgent 进程确认在运行），**等用户输入管理员密码**。
-- **临时验证手段**：已用 `xcrun -sdk iphoneos swiftc -typecheck` 对全部源码按 iOS 16 目标做完整类型检查（不经过损坏的插件系统），全绿；链接与资源打包待授权后 xcodebuild 复验。
-- 若弹窗已消失：用户手动打开一次 Xcode.app 或在终端运行 `sudo xcodebuild -runFirstLaunch` 即可。
+- 用户执行 `sudo xcodebuild -runFirstLaunch` 重装系统组件成功；随后在 Xcode GUI 下载 iOS 26.4 Simulator（23E244，8.46 GB）完成。
+- ✅ 模拟器目标 `BUILD SUCCEEDED`；真机目标 `BUILD SUCCEEDED`。
+
+## 2026-09-09 00:25 · 模拟器冒烟测试（发现并修复 2 个真机级缺陷）
+
+1. **Keychain 权限缺失（errSecMissingEntitlement -34018）**：无签名构建缺少 keychain-access-groups entitlement，数据层初始化失败 → 致命错误页。修复：新增 `MuscleRelax.entitlements`（keychain-access-groups = AppIdentifierPrefix + bundle id），project.yml 加 `CODE_SIGN_ENTITLEMENTS`，改为 adhoc 签名构建。
+2. **启动即崩溃（NSUnknownKeyException）**：`CoreDataStore.init` 用 KVC `setValue(_:forKey:)` 给 NSPersistentStoreDescription 设置文件保护选项 → 运行时抛异常。修复：改用 `setOption(_:forKey:)`，值用 `FileProtectionType.complete.rawValue as NSString`。
+   - 教训：类型检查无法发现此类运行时 API 误用，冒烟测试（模拟器 install + launch + 截图 + log）是必要环节。
+3. 修复后：免责声明首屏正常渲染，合规文案与"滚到底后继续"提示就位。
+
+### 待人工确认项
+
+- 免责声明"同意并进入"按钮在模拟器截图中呈蓝色，需人工滑动验证"未滚到底不可点"的禁用态是否生效（§8.2.1）。
+- 语音输入/播报、备份导出导入、热区点击体验需真机或 GUI 模拟器人工过一遍。
+
+### 复验命令
+
+```bash
+cd MuscleRelax
+USER=will xcodegen generate   # 仅当新增/删除文件后需要
+xcodebuild -project MuscleRelax.xcodeproj -scheme MuscleRelax \
+  -destination 'generic/platform=iOS Simulator' -configuration Debug build
+```
 
 ## 遗留风险（需真机/模拟器验证）
 
