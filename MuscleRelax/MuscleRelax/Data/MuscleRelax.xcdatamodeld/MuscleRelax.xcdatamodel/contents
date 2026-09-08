@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23507" systemVersion="24G90" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="false" userDefinedModelVersionIdentifier="">
+    <entity name="AppSetting" syncable="YES">
+        <attribute name="backupReminderEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="disclaimerAcceptedVersion" attributeType="String" defaultValueString=""/>
+        <attribute name="language" attributeType="String" defaultValueString="zh"/>
+        <attribute name="largeTextMode" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="onboardingCompleted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="SoreRecord" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="generatedText" attributeType="Binary"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="level" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="regionId" attributeType="String"/>
+        <attribute name="side" attributeType="String" defaultValueString="center"/>
+        <attribute name="source" attributeType="String" defaultValueString="manual"/>
+        <attribute name="symptomText" attributeType="Binary"/>
+        <attribute name="templateId" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="UserTemplate" syncable="YES">
+        <attribute name="content" attributeType="Binary"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="Binary"/>
+        <attribute name="regionId" attributeType="String"/>
+        <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>

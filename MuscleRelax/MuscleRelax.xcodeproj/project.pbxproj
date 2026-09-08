@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03DFF267F3FBC20ADEE3A763 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61D933C1AC8FC31FDB28C8 /* DisclaimerView.swift */; };
+		1AC7EFF51FE6DD240C64C7C2 /* SynonymsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C992CB8FE153A2C83BB2C /* SynonymsData.swift */; };
+		1C6E265A1D66901F68D715AB /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB3070F012E5CD5B598 /* CoreDataStore.swift */; };
+		2524C1390CB9A6E492A902D6 /* ServiceContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE133C569B68C2357BDE88 /* ServiceContracts.swift */; };
+		2DC71DF13A41FA3978A1FD74 /* StretchGuidesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C48DA8EC789F086F201070 /* StretchGuidesData.swift */; };
+		362C90D2E998073D6D4B8D57 /* RegionInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ADFEED9DEC9C9B42967E1 /* RegionInfoView.swift */; };
+		3C658C8E1539328EEA9EC1BE /* DomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14CA8D9AD59E68A169D1B42 /* DomainModels.swift */; };
+		3D56DD3C2B99F6906BEE2E4F /* BroadcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E19F8E0BF59F55650BA3F6 /* BroadcastView.swift */; };
+		55359F83C7DBBD722B75539D /* TemplatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C239A6D0E3B75C5E7AF502 /* TemplatesData.swift */; };
+		56552C3930EF9A69C05CCFE0 /* BodyMap2DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105CED20CAA25BD8814C8E4 /* BodyMap2DView.swift */; };
+		576543C61A9F00307B1D952B /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93067A003EBB838306E6923 /* BackupService.swift */; };
+		5F05783B78F6F38BBC50D43E /* RegionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ED465F0C7B9BCDBD2B03C5 /* RegionsData.swift */; };
+		6A0A1EFCA0662DD906ACA777 /* MuscleRelax.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC3C331190C9A835A86CCC41 /* MuscleRelax.xcdatamodeld */; };
+		767E6F7C6E94F911C9295EEB /* ComplianceCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3204B0A9272A8D72C9D2F52B /* ComplianceCopy.swift */; };
+		76F88C53076DBAC06743453D /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EFF4C35D6B32C1EABCCADC /* CryptoService.swift */; };
+		772C7236782AF3B9998D1DBF /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF11E9FE93E7C93B6F04865 /* KeychainService.swift */; };
+		7D7C7D7A0866DEF59923EFDC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F9A1BF9AABE065ACB6A76 /* AppState.swift */; };
+		8640BC2234680FBBE7BBB890 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C2E68A94046D3E0E40C54 /* DesignTokens.swift */; };
+		872D7467960CF85F2D44ABFA /* BackupReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D72E6B32426A72E3DD6376 /* BackupReminderService.swift */; };
+		895B04D737A1FCF048864061 /* RecordFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D2411F0C1CF658094285A /* RecordFlowView.swift */; };
+		932654EF2453EDE2D6943FAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19FB6A15B6ED2BA0E1D606C /* SettingsView.swift */; };
+		98F833709F8F9B81CDC525E8 /* MuscleRelaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1B2FC120F180005ADB79B /* MuscleRelaxApp.swift */; };
+		9D14366F5B2394C15BB1077C /* StaticContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF44F50EE931891D67A27F22 /* StaticContent.swift */; };
+		A5CB8FA660548C842E3A6017 /* SemanticParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66924D014045D9C3A7F193AC /* SemanticParser.swift */; };
+		AF4243DC545B94E8F7704363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E1C8F52DFE4036120EC24A /* Assets.xcassets */; };
+		B1273F4583DB5899A024C32B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35836DDD6BAC2F31B68285DF /* HomeView.swift */; };
+		B1CB5030218B9C3D1DC7E276 /* DataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADABFE7E1987BF987A17DA29 /* DataErrors.swift */; };
+		B5550588ED1FDBA6F45B992E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D9524248F347EB46E65EC /* HistoryView.swift */; };
+		B9FBD032928DAE5E0E0E6790 /* BroadcastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F513974BEFA5DC042EF59E /* BroadcastService.swift */; };
+		BB133DB0C262B92F791A0891 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200B3307B909CFAE227AFEB /* ContentView.swift */; };
+		CDFB9F749BE25E2C28DFE8BE /* DataContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B55AF58A02D92A300FB35D3 /* DataContracts.swift */; };
+		DB71CAC4C92110BD9761AB0A /* SpeechInputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4795A1A0D7F03B9E57E4E451 /* SpeechInputService.swift */; };
+		F410CD378D5286FB05120D79 /* BackupSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3FE7282E346AA9BF90AF3 /* BackupSchema.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		006D2411F0C1CF658094285A /* RecordFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordFlowView.swift; sourceTree = "<group>"; };
+		01B4ADB3070F012E5CD5B598 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		03E19F8E0BF59F55650BA3F6 /* BroadcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastView.swift; sourceTree = "<group>"; };
+		050F1DAE3C55354B7CBAF280 /* MuscleRelax.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MuscleRelax.xcdatamodel; sourceTree = "<group>"; };
+		06A68041B814B1D5B5EC54CB /* MuscleRelax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MuscleRelax.entitlements; sourceTree = "<group>"; };
+		08C48DA8EC789F086F201070 /* StretchGuidesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchGuidesData.swift; sourceTree = "<group>"; };
+		241C992CB8FE153A2C83BB2C /* SynonymsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynonymsData.swift; sourceTree = "<group>"; };
+		2B51DD17E474C07859D10EDB /* MuscleRelax.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MuscleRelax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3204B0A9272A8D72C9D2F52B /* ComplianceCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceCopy.swift; sourceTree = "<group>"; };
+		35836DDD6BAC2F31B68285DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3E61D933C1AC8FC31FDB28C8 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		46ED465F0C7B9BCDBD2B03C5 /* RegionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsData.swift; sourceTree = "<group>"; };
+		4795A1A0D7F03B9E57E4E451 /* SpeechInputService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechInputService.swift; sourceTree = "<group>"; };
+		49E1C8F52DFE4036120EC24A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		527ADFEED9DEC9C9B42967E1 /* RegionInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionInfoView.swift; sourceTree = "<group>"; };
+		52C239A6D0E3B75C5E7AF502 /* TemplatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesData.swift; sourceTree = "<group>"; };
+		5F1D9524248F347EB46E65EC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		66924D014045D9C3A7F193AC /* SemanticParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticParser.swift; sourceTree = "<group>"; };
+		6B55AF58A02D92A300FB35D3 /* DataContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContracts.swift; sourceTree = "<group>"; };
+		6C7F9A1BF9AABE065ACB6A76 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		711C2E68A94046D3E0E40C54 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
+		7200B3307B909CFAE227AFEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81F513974BEFA5DC042EF59E /* BroadcastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastService.swift; sourceTree = "<group>"; };
+		9105CED20CAA25BD8814C8E4 /* BodyMap2DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMap2DView.swift; sourceTree = "<group>"; };
+		ADABFE7E1987BF987A17DA29 /* DataErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrors.swift; sourceTree = "<group>"; };
+		AF44F50EE931891D67A27F22 /* StaticContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticContent.swift; sourceTree = "<group>"; };
+		B14CA8D9AD59E68A169D1B42 /* DomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModels.swift; sourceTree = "<group>"; };
+		B19FB6A15B6ED2BA0E1D606C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B6DE133C569B68C2357BDE88 /* ServiceContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContracts.swift; sourceTree = "<group>"; };
+		BEF11E9FE93E7C93B6F04865 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		C93067A003EBB838306E6923 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
+		D8D1B2FC120F180005ADB79B /* MuscleRelaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleRelaxApp.swift; sourceTree = "<group>"; };
+		E3C3FE7282E346AA9BF90AF3 /* BackupSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupSchema.swift; sourceTree = "<group>"; };
+		E5EFF4C35D6B32C1EABCCADC /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
+		F5D72E6B32426A72E3DD6376 /* BackupReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupReminderService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0762BB17A75111889579BEE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B51DD17E474C07859D10EDB /* MuscleRelax.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14CE3CAC3A40C38FBC65549A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3FE7282E346AA9BF90AF3 /* BackupSchema.swift */,
+				B14CA8D9AD59E68A169D1B42 /* DomainModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2868AFB9A4BD07FF163A22AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C93067A003EBB838306E6923 /* BackupService.swift */,
+				01B4ADB3070F012E5CD5B598 /* CoreDataStore.swift */,
+				E5EFF4C35D6B32C1EABCCADC /* CryptoService.swift */,
+				6B55AF58A02D92A300FB35D3 /* DataContracts.swift */,
+				ADABFE7E1987BF987A17DA29 /* DataErrors.swift */,
+				BEF11E9FE93E7C93B6F04865 /* KeychainService.swift */,
+				EC3C331190C9A835A86CCC41 /* MuscleRelax.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		36B90319DED5FBE9F13C0D8F /* MuscleRelax */ = {
+			isa = PBXGroup;
+			children = (
+				06A68041B814B1D5B5EC54CB /* MuscleRelax.entitlements */,
+				C237A2407DAE6D91F7EC4181 /* App */,
+				627BA4928B9DC3372951DC0A /* Content */,
+				2868AFB9A4BD07FF163A22AC /* Data */,
+				14CE3CAC3A40C38FBC65549A /* Models */,
+				67B96F9C5BA8D05B2636F720 /* Resources */,
+				75BEDD9E9BDD0E2215F613FC /* Services */,
+				B85E59D6FE58863F5794C8CF /* UI */,
+			);
+			path = MuscleRelax;
+			sourceTree = "<group>";
+		};
+		627BA4928B9DC3372951DC0A /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				46ED465F0C7B9BCDBD2B03C5 /* RegionsData.swift */,
+				AF44F50EE931891D67A27F22 /* StaticContent.swift */,
+				08C48DA8EC789F086F201070 /* StretchGuidesData.swift */,
+				241C992CB8FE153A2C83BB2C /* SynonymsData.swift */,
+				52C239A6D0E3B75C5E7AF502 /* TemplatesData.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		67B96F9C5BA8D05B2636F720 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49E1C8F52DFE4036120EC24A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75BEDD9E9BDD0E2215F613FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F5D72E6B32426A72E3DD6376 /* BackupReminderService.swift */,
+				81F513974BEFA5DC042EF59E /* BroadcastService.swift */,
+				66924D014045D9C3A7F193AC /* SemanticParser.swift */,
+				B6DE133C569B68C2357BDE88 /* ServiceContracts.swift */,
+				4795A1A0D7F03B9E57E4E451 /* SpeechInputService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B85E59D6FE58863F5794C8CF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6C7F9A1BF9AABE065ACB6A76 /* AppState.swift */,
+				9105CED20CAA25BD8814C8E4 /* BodyMap2DView.swift */,
+				03E19F8E0BF59F55650BA3F6 /* BroadcastView.swift */,
+				3204B0A9272A8D72C9D2F52B /* ComplianceCopy.swift */,
+				7200B3307B909CFAE227AFEB /* ContentView.swift */,
+				711C2E68A94046D3E0E40C54 /* DesignTokens.swift */,
+				3E61D933C1AC8FC31FDB28C8 /* DisclaimerView.swift */,
+				5F1D9524248F347EB46E65EC /* HistoryView.swift */,
+				35836DDD6BAC2F31B68285DF /* HomeView.swift */,
+				006D2411F0C1CF658094285A /* RecordFlowView.swift */,
+				527ADFEED9DEC9C9B42967E1 /* RegionInfoView.swift */,
+				B19FB6A15B6ED2BA0E1D606C /* SettingsView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C237A2407DAE6D91F7EC4181 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D8D1B2FC120F180005ADB79B /* MuscleRelaxApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EEE209F755D5A803BBED21AE = {
+			isa = PBXGroup;
+			children = (
+				36B90319DED5FBE9F13C0D8F /* MuscleRelax */,
+				0762BB17A75111889579BEE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F7AD094477E63C4600CAA47 /* MuscleRelax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C32646B4DC8D6919875121C /* Build configuration list for PBXNativeTarget "MuscleRelax" */;
+			buildPhases = (
+				857C2C2E5DC2BA04F8175430 /* Sources */,
+				F5F7122C10A4AB904168B7E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuscleRelax;
+			packageProductDependencies = (
+			);
+			productName = MuscleRelax;
+			productReference = 2B51DD17E474C07859D10EDB /* MuscleRelax.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5E090531449E1A9E193F7C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7F7AD094477E63C4600CAA47 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 302A66351A0605DB9B9C8E92 /* Build configuration list for PBXProject "MuscleRelax" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EEE209F755D5A803BBED21AE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0762BB17A75111889579BEE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F7AD094477E63C4600CAA47 /* MuscleRelax */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5F7122C10A4AB904168B7E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4243DC545B94E8F7704363 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		857C2C2E5DC2BA04F8175430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7C7D7A0866DEF59923EFDC /* AppState.swift in Sources */,
+				872D7467960CF85F2D44ABFA /* BackupReminderService.swift in Sources */,
+				F410CD378D5286FB05120D79 /* BackupSchema.swift in Sources */,
+				576543C61A9F00307B1D952B /* BackupService.swift in Sources */,
+				56552C3930EF9A69C05CCFE0 /* BodyMap2DView.swift in Sources */,
+				B9FBD032928DAE5E0E0E6790 /* BroadcastService.swift in Sources */,
+				3D56DD3C2B99F6906BEE2E4F /* BroadcastView.swift in Sources */,
+				767E6F7C6E94F911C9295EEB /* ComplianceCopy.swift in Sources */,
+				BB133DB0C262B92F791A0891 /* ContentView.swift in Sources */,
+				1C6E265A1D66901F68D715AB /* CoreDataStore.swift in Sources */,
+				76F88C53076DBAC06743453D /* CryptoService.swift in Sources */,
+				CDFB9F749BE25E2C28DFE8BE /* DataContracts.swift in Sources */,
+				B1CB5030218B9C3D1DC7E276 /* DataErrors.swift in Sources */,
+				8640BC2234680FBBE7BBB890 /* DesignTokens.swift in Sources */,
+				03DFF267F3FBC20ADEE3A763 /* DisclaimerView.swift in Sources */,
+				3C658C8E1539328EEA9EC1BE /* DomainModels.swift in Sources */,
+				B5550588ED1FDBA6F45B992E /* HistoryView.swift in Sources */,
+				B1273F4583DB5899A024C32B /* HomeView.swift in Sources */,
+				772C7236782AF3B9998D1DBF /* KeychainService.swift in Sources */,
+				6A0A1EFCA0662DD906ACA777 /* MuscleRelax.xcdatamodeld in Sources */,
+				98F833709F8F9B81CDC525E8 /* MuscleRelaxApp.swift in Sources */,
+				895B04D737A1FCF048864061 /* RecordFlowView.swift in Sources */,
+				362C90D2E998073D6D4B8D57 /* RegionInfoView.swift in Sources */,
+				5F05783B78F6F38BBC50D43E /* RegionsData.swift in Sources */,
+				A5CB8FA660548C842E3A6017 /* SemanticParser.swift in Sources */,
+				2524C1390CB9A6E492A902D6 /* ServiceContracts.swift in Sources */,
+				932654EF2453EDE2D6943FAE /* SettingsView.swift in Sources */,
+				DB71CAC4C92110BD9761AB0A /* SpeechInputService.swift in Sources */,
+				9D14366F5B2394C15BB1077C /* StaticContent.swift in Sources */,
+				2DC71DF13A41FA3978A1FD74 /* StretchGuidesData.swift in Sources */,
+				1AC7EFF51FE6DD240C64C7C2 /* SynonymsData.swift in Sources */,
+				55359F83C7DBBD722B75539D /* TemplatesData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3C15EFF1802342CDA40FC8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MuscleRelax/MuscleRelax.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "肌肉放松沟通助手";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "用于语音输入描述身体状态，识别仅在设备本地完成，不会上传任何音频。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "用于将语音转为文字，识别仅在设备本地完成，不会上传任何数据。";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.will.musclerelax.app;
+				PRODUCT_NAME = "肌肉放松沟通助手";
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5E2822711FD05E6C8DCE6461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6359AA16BC854FAD6F944C55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MuscleRelax/MuscleRelax.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "肌肉放松沟通助手";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "用于语音输入描述身体状态，识别仅在设备本地完成，不会上传任何音频。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "用于将语音转为文字，识别仅在设备本地完成，不会上传任何数据。";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.will.musclerelax.app;
+				PRODUCT_NAME = "肌肉放松沟通助手";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CF68174C0D4BCB0818FED8CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		302A66351A0605DB9B9C8E92 /* Build configuration list for PBXProject "MuscleRelax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E2822711FD05E6C8DCE6461 /* Debug */,
+				CF68174C0D4BCB0818FED8CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8C32646B4DC8D6919875121C /* Build configuration list for PBXNativeTarget "MuscleRelax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C15EFF1802342CDA40FC8F9 /* Debug */,
+				6359AA16BC854FAD6F944C55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC3C331190C9A835A86CCC41 /* MuscleRelax.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				050F1DAE3C55354B7CBAF280 /* MuscleRelax.xcdatamodel */,
+			);
+			currentVersion = 050F1DAE3C55354B7CBAF280 /* MuscleRelax.xcdatamodel */;
+			path = MuscleRelax.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B5E090531449E1A9E193F7C6 /* Project object */;
+}
