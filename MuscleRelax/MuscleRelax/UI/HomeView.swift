@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject private var store: CoreDataStore
 
     @State private var selectedRegionId: String?
+    @State private var use3DBody = true // 人体可视化默认 3D（§3.3），可切回 2D 热区图
     @State private var guideRegion: BodyRegion?
     @State private var showRecordFlow = false
     @State private var showTemplates = false
@@ -38,10 +39,40 @@ struct HomeView: View {
 
                 ScrollView {
                     VStack(spacing: 16) {
-                        // MARK: 人体热区图（占屏主体）
-                        BodyMap2DView(selectedRegionId: $selectedRegionId)
-                            .padding(.horizontal, 16)
-                            .padding(.top, 8)
+                        // MARK: 人体可视化核心区（默认 3D，可切回 2D 热区图，§3.3）
+                        ZStack(alignment: .topTrailing) {
+                            Group {
+                                if use3DBody {
+                                    BodyScene3DView(selectedRegionId: $selectedRegionId)
+                                } else {
+                                    BodyMap2DView(selectedRegionId: $selectedRegionId)
+                                }
+                            }
+
+                            // 3D/2D 胶囊切换
+                            Button {
+                                withAnimation(.spring(response: 0.28, dampingFraction: 0.8)) {
+                                    use3DBody.toggle()
+                                }
+                            } label: {
+                                Text(use3DBody ? "2D" : "3D")
+                                    .font(DT.Font.auxiliary.weight(.semibold))
+                                    .foregroundStyle(DT.Color.primary)
+                                    .padding(.horizontal, 12)
+                                    .padding(.vertical, 6)
+                                    .background(DT.Color.background.opacity(0.92))
+                                    .clipShape(Capsule())
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(DT.Color.primary.opacity(0.35), lineWidth: 1)
+                                    )
+                            }
+                            .padding(.top, 58) // 避开 3D/2D 视图内右上角的「列表」入口
+                            .padding(.trailing, 6)
+                            .accessibilityLabel(use3DBody ? "切换到 2D 热区图" : "切换到 3D 人体模型")
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 8)
 
                         // MARK: 选中部位信息卡
                         if let region = selectedRegion {

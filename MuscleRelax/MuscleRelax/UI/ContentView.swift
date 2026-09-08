@@ -61,12 +61,24 @@ private struct ReadyRootView: View {
 
     var body: some View {
         Group {
+            #if DEBUG
+            // 调试通道：自动化截图验证可绕过免责声明门控（Release 不受影响）
+            if ProcessInfo.processInfo.arguments.contains("-SkipDisclaimerPreview") {
+                HomeView()
+            } else if !store.settings.onboardingCompleted
+                || store.settings.disclaimerAcceptedVersion != Compliance.disclaimerVersion {
+                DisclaimerView()
+            } else {
+                HomeView()
+            }
+            #else
             if !store.settings.onboardingCompleted
                 || store.settings.disclaimerAcceptedVersion != Compliance.disclaimerVersion {
                 DisclaimerView()
             } else {
                 HomeView()
             }
+            #endif
         }
         .modifier(LargeTextModeModifier(enabled: store.settings.largeTextMode))
     }

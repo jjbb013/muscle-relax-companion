@@ -11,6 +11,7 @@
 		1AC7EFF51FE6DD240C64C7C2 /* SynonymsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C992CB8FE153A2C83BB2C /* SynonymsData.swift */; };
 		1C6E265A1D66901F68D715AB /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B4ADB3070F012E5CD5B598 /* CoreDataStore.swift */; };
 		2524C1390CB9A6E492A902D6 /* ServiceContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE133C569B68C2357BDE88 /* ServiceContracts.swift */; };
+		2A1AFBC57E3542E2D557976A /* BodyScene3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3128C57D8CE2E80A2BB5B82 /* BodyScene3DView.swift */; };
 		2DC71DF13A41FA3978A1FD74 /* StretchGuidesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C48DA8EC789F086F201070 /* StretchGuidesData.swift */; };
 		362C90D2E998073D6D4B8D57 /* RegionInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ADFEED9DEC9C9B42967E1 /* RegionInfoView.swift */; };
 		3C658C8E1539328EEA9EC1BE /* DomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14CA8D9AD59E68A169D1B42 /* DomainModels.swift */; };
@@ -75,6 +76,7 @@
 		BEF11E9FE93E7C93B6F04865 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		C93067A003EBB838306E6923 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
 		D8D1B2FC120F180005ADB79B /* MuscleRelaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleRelaxApp.swift; sourceTree = "<group>"; };
+		E3128C57D8CE2E80A2BB5B82 /* BodyScene3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyScene3DView.swift; sourceTree = "<group>"; };
 		E3C3FE7282E346AA9BF90AF3 /* BackupSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupSchema.swift; sourceTree = "<group>"; };
 		E5EFF4C35D6B32C1EABCCADC /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
 		F5D72E6B32426A72E3DD6376 /* BackupReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupReminderService.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				6C7F9A1BF9AABE065ACB6A76 /* AppState.swift */,
 				9105CED20CAA25BD8814C8E4 /* BodyMap2DView.swift */,
+				E3128C57D8CE2E80A2BB5B82 /* BodyScene3DView.swift */,
 				03E19F8E0BF59F55650BA3F6 /* BroadcastView.swift */,
 				3204B0A9272A8D72C9D2F52B /* ComplianceCopy.swift */,
 				7200B3307B909CFAE227AFEB /* ContentView.swift */,
@@ -269,6 +272,7 @@
 				F410CD378D5286FB05120D79 /* BackupSchema.swift in Sources */,
 				576543C61A9F00307B1D952B /* BackupService.swift in Sources */,
 				56552C3930EF9A69C05CCFE0 /* BodyMap2DView.swift in Sources */,
+				2A1AFBC57E3542E2D557976A /* BodyScene3DView.swift in Sources */,
 				B9FBD032928DAE5E0E0E6790 /* BroadcastService.swift in Sources */,
 				3D56DD3C2B99F6906BEE2E4F /* BroadcastView.swift in Sources */,
 				767E6F7C6E94F911C9295EEB /* ComplianceCopy.swift in Sources */,

@@ -242,7 +242,8 @@ struct RecordFlowView: View {
     private var regionStep: some View {
         VStack(spacing: 0) {
             ScrollView {
-                BodyMap2DView(selectedRegionId: regionBinding)
+                // 与首页同一 3D 人体模型组件（§3.3 / §6.1），步骤状态与冲突确认逻辑不变
+                BodyScene3DView(selectedRegionId: regionBinding)
                     .padding(.horizontal, 16)
                     .padding(.top, 8)
             }
