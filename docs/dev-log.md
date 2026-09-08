@@ -92,3 +92,13 @@ xcodebuild -project MuscleRelax.xcodeproj -scheme MuscleRelax \
 - 全部源码（40 个文件）+ MIT LICENSE + .gitignore 推送至 `jjbb013/muscle-relax-companion` 的 `MuscleRelax/` 目录，README 更新为含构建说明的开源版本。
 - 注意：本机 git 直连 github.com:443 不通（gh CLI 走 API 正常），发布改用 GitHub Git Data API（blobs → tree → commit → ref）完成，未走 git clone。
 - 仓库现为公开仓库，含：源码、隐私政策（GitHub Pages）、需求说明书、开发日志。
+
+## 2026-09-09 01:30 · 首页 3D 人体模型（commit 90f39881）
+
+- **需求**：用户要求首页人物模型为 3D，支持双指捏合缩放、旋转，参考低模肌肉分区示意图。
+- **方案**：`BodyScene3DView`（UIViewRepresentable 包装 SCNView），**程序化低模人形**（SCN 几何体拼装，约 1.75 场景单位），零外部 3D 资产、零授权风险；20 个部位节点 name = regionId 全覆盖，肌肉分区柔和着色（#3D8BFF 蓝色系 + 颈肩暖杏点缀）。
+- **交互**：allowsCameraControl（单指旋转 / 双指捏合缩放 / 双指平移）+ 单击 SCNHitTest 选部位 + 双击复位相机；选中部位 emission 高亮 + 1.05× 弹簧动画，相机向该侧微倾（§6.1.4）。
+- **集成**：HomeView 默认 3D、右上角「2D」胶囊切回 2D 热区图（§3.3 降级路径保留）；RecordFlowView 第①步同步 3D；DEBUG 启动参数 `-SkipDisclaimerPreview` 供自动化截图。
+- **验证迭代（3 轮截图）**：① SCNView 子类 init 崩溃修复 → ② 相机 pivot 导致模型出视锥（改圆周机位 + defaultCameraController.target）→ ③ 渲染正常；另修复「列表」入口与 3D/2D 切换胶囊的布局重叠。
+- **遗留**：3D 区在 ScrollView 内，单指旋转与页面滚动可能竞争；点选有约 0.25s 双击识别延迟；模型占比偏小可调 cameraHomeDistance 3.1 → 2.7。
+- 截图：`smoke-3d-2.png`（首页 3D 渲染正常，界面无重叠）。
